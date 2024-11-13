@@ -1,0 +1,3 @@
+This is the file that will be used for testing purposes only
+Can be used to read
+Can be used to write

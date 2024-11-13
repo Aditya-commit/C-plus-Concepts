@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+// CANNOT USE STRING NORMALLY . NEED TO USE THEM WITH VARIANT HEADER FILE
+
+
+union User{
+
+    char name;
+    int age;
+};
+
+int main(){
+
+
+    // WE USE UNION WHEN WE WANT TO SHARE THE MEMORY AS THIS HELPS IN USING LESS MEMORY . WITH UNIONS THE PROGRAM CAN USE ONLY ONE PROPERTY AT A TIME DUE TO WHICH THE TOTAL MEMORY ALLOCATED TO THE UNION VARIABLE IS EQUAL TO THE LARGEST DATA TYPE , THUS MAKING OUR PROGRAM FASTER AND EFFECIENT
+
+    User aditya;
+
+    aditya.name = 'a';
+
+    cout << aditya.name;
+
+    return 0;
+}
