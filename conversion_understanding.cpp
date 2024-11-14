@@ -12,7 +12,7 @@ class Time{
 
 		Time(int t);
 
-		void display(void);
+		void display(void); // FUNCTION PROTOTYPING
 };
 
 
