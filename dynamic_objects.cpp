@@ -27,7 +27,7 @@ int main(){
 	ptr->showData();
 	delete ptr;
 
-	cout << endl << "The address of ptr = " << &ptr << endl;
+	cout << endl << "The address of ptr which is stored in stack = " << &ptr << endl;
 	cout << endl << "The address of the object pointed by ptr = " << ptr << endl;
 
 	return 0;
