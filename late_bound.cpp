@@ -55,5 +55,9 @@ int main(){
 
     // I HAVE COMPLICATED IT A LITTLE BIT BY USING dynamic ALLOCATION OF OBJECTS
 
+    delete s1;
+    delete r1;
+    delete t1;
+
     return 0;
 }
