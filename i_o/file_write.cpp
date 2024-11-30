@@ -7,7 +7,7 @@ using namespace std;
 int main(){
 
 
-    ofstream outputFile("file.txt");
+    ofstream outputFile("file1.txt");
 
     char text[100];
 
