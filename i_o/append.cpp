@@ -18,6 +18,12 @@ int main(){
 	if(file.is_open()){
 
 		file << text;
+
+		cout << file.rdstate();
+		cout << file.good();
+		cout << file.bad();
+		cout << file.fail();
+		cout << file.eof();
 		file.close();
 	}
 	else{
