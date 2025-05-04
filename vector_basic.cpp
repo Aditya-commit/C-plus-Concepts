@@ -27,5 +27,19 @@ int main(){
         cout << endl << val;
     }
 
+
+
+    cout << endl << endl << endl;
+
+
+    vector<int>::iterator begin_iter = v3.begin();
+
+    cout << *(begin_iter); // THIS RETURN THE ITERATOR POINTING TO THE FIRST ELEMENT OF THE VECTOR
+
+    vector<int>::iterator end_iter = v3.end();
+    cout << endl << *(end_iter) << endl; // THIS RETURN THE POINTER PAST THE LAST ELEMENT OF THE VECTOR (MAYBE MEMORY)
+    cout << *(end_iter-1) << endl; // THIS RETURNS THE LAST ELEMENT OF THE VECTOR AND SO ON 
+
+
     return 0;
 }
