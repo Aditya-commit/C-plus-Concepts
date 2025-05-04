@@ -17,6 +17,10 @@ int main(){
     cout << v2[1];
     cout << v2[2];
 
+    v2.push_back(34);
+    v2.emplace_back(35); // THIS IS FASTER THAN push_back()
+
+
     for(int val : v3){
 
         // HERE val IS NOT THE INDEX BUT THE VALUE ITSELF
