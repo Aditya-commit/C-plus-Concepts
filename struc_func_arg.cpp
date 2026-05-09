@@ -6,7 +6,7 @@ using namespace std;
 struct user{
     string name;
     int age;
-    int rollno;
+    string address;
 };
 
 // HERE user ACTS A DATATYPE
@@ -18,7 +18,7 @@ void printUserDetails(struct user User){
 
     cout << User.name << "\n";
     cout << User.age << "\n";
-    cout << User.rollno << "\n";
+    cout << User.address << "\n";
 
     User.name = "aman"; // THIS WILL NOT CHANGE THE ACTUAL VALUE
 }
@@ -26,21 +26,22 @@ void printUserDetails(struct user User){
 
 int main(){
 
-    user aditya , ishu;
+    user User1;
 
-    aditya.name = "Aditya Singh Tomar";
-    aditya.age = 22;
-    aditya.rollno = 4;
+    cout << "Enter your name : ";
+    getline(cin, User1.name);
 
+    cout << "Enter your age : ";
+    cin >> User1.age;
 
-    ishu.name = "Ishu Singh Tomar";
-    ishu.age = 22;
-    ishu.rollno = 24;
+    cin.ignore(); // remove leftover newline
+
+    cout << "Enter your address : ";
+    getline(cin, User1.address);
 
 
     // PRINTING THE DETAILS OF THE USERS
-    printUserDetails(aditya);
-    printUserDetails(ishu);
+    printUserDetails(User1);
 
-    cout << ishu.name;
+    cout << User1.name;
 }
