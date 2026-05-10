@@ -2,13 +2,14 @@
 using namespace std;
 
 class Sample{
-private:
-	int data;
+	private:
+		int data;
 
-public:
-	Sample(){
-		data=0;
-	}
+	public:
+		Sample(){
+			data=0;
+		}
+
 	void changeData() const{
 		//data=10; // THIS WILL REPORT IN AN ERROR
 		
@@ -43,5 +44,10 @@ int main(){
 	Sample s4;
 	s4.add(s2 , s3);
 	s4.showData();
+
+	s3.getData();
+	s4.add(s2 , s3);
+	s4.showData();
+
 	return 0;
 }
