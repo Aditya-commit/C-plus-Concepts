@@ -37,7 +37,7 @@ int main(){
 
     Date d1(22 , 12 , 2024) , d2(12 , 4 , 2035) , d3;
 
-    d3 = d1+d2; // -> this becomes d1.operator+(d2)
+    d3 = d1+d2; // -> it becomes d1.operator+(d2)
 
     d3.displayDate();
 
