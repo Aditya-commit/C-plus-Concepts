@@ -28,8 +28,10 @@ int main(){
 
     // ----------------------------------------------------------------------------------------
 
+    // THE GAP BETWEEN THE ADDRESS OF FIRST AND SECOND ELEMENT WILL BE OF 4 BYTES AS THEY ARE INTEGER
     cout << endl << "Memory address of first element " << &arr[0];
     cout << endl << "Memory address of second element " << &arr[1];
+
 
 
     // FROM THIS WE CAN UNDERSTAND THAT ARRAYS STORES THE ADDRESS OF THE ELEMENTS JUST LIKE POINTERS
