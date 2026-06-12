@@ -2,6 +2,8 @@
 #include <string>
 using namespace std;
 
+// I DON'T THINK THIS IS IN ANY WAY A COPY CONSTRUCTOR
+
 class Line{
 public:
 

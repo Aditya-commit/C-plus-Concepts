@@ -6,7 +6,7 @@ int main(){
 
     enum color { red , green , blue } c;
 
-    c = green;
+    c = red;
 
     // EVERY NEXT NAME HAS A VALUE ONE GREATER THAN ITS PRECEEDING NAME
 

@@ -10,7 +10,6 @@ int main(){
 
 	itoa(234 , str, 10);
 
-	cout << str;
-
+	cout << str << endl << typeid(str).name();
 	return 0;
 }
