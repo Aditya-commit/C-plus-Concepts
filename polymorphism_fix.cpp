@@ -31,7 +31,7 @@ public:
 
 	Triangle(int a, int b): Shape(a , b){}
 
-	int getArea(void){
+	int getArea(void) override{ // ALWAYS USE 'override' KEYWORD WHEN OVERRIDING A VIRTUAL OR PURE VIRTUAL FUNCTION IN DERIVED CLASSES
 
 		return (width * height)/2;
 	}

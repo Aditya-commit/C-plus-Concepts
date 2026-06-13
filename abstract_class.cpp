@@ -38,7 +38,7 @@ class Triangle:public Shape{
 		Triangle(int a , int b):Shape(a , b){}
 
 
-		int getArea(void){
+		int getArea(void)override{
 
 			return (width*height)/2;
 		}	

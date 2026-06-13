@@ -11,6 +11,7 @@ class User{
         string name;
 
         User(); // CONSTRUCTOR
+        User(int age1) : age(age1) {}; // USING INITIALIZER LIST
 };
 
 User::User(void){

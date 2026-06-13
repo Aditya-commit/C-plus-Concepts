@@ -17,6 +17,8 @@ class Base{
         void displayGreeting(void){
             cout << "Hello from Base class" << endl;
         }
+
+        virtual void checkFuncCall(void){ cout << "This func call is from base class" << endl ; }
 };
 
 class Derived:public Base{
@@ -25,6 +27,8 @@ class Derived:public Base{
         void displayGreeting(void){
             cout << "Hello from Derived class" << endl;
         }
+
+        void checkFuncCall(void) override { cout << "This func call is from Derived class" << endl; }
 };
 
 class Derived1:public Base{
@@ -34,14 +38,18 @@ class Derived1:public Base{
         void displayGreeting(void){
             cout << "Hello from Derived 1 class" << endl;
         }
+
+        void checkFuncCall(void) override { cout << "This func call is from Derived1 class" << endl; }
 };
 
 
 int main(){
 
-    Derived obj;
+    Base *base_obj;
 
-    obj.displayGreeting();
+    base_obj = new Derived();
+    base_obj->checkFuncCall(); // SINCE THIS IS VIRTUAL FUNCTION , SO THE METHOD OF THE OBJECT TO WHICH THE POINTER IS POINTER TO WILL BE CALLED
+    base_obj->displayGreeting(); // SINCE THIS IS NON VIRTUAL FUNCTION , SO THE METHOD OF THE TYPE WHICH IS USED FOR POINTER , THE METHOD OF THAT CLASS IS USED
 
     return 0;
 }
