@@ -35,11 +35,13 @@ class Derived : public Base{
             j=j1;
         }
 
-        void func1(void){
+        void func1(void) override{
 
             Base::func1();
             cout << "The derived class func j = " << j << endl;
         }
+
+        void testDerived(void){ cout << "Hi this is testing derived function" << endl; }
 };
 
 
@@ -59,6 +61,7 @@ int main(){
 
     Base *ptr2 = &d;
     ptr2->func1();
+    // ptr2->testDerived(); WE CANNOT CALL OTHER THAN VIRTUAL OVVERRIDEN FUNCTIONS OF DERIVED CLASSES BECAUSE THE TYPE OF THE POINTER THAT WE ARE USING IS OF TYPE BASE AND THAT FUNCTION DOES NOT EXIST IN THE BASE CLASS
 
     // ---------------------------------------
 
@@ -79,6 +82,7 @@ int main(){
     b = d; // OBJECT SLICING
 
     b.func1();
+    
 
     return 0;
 }
