@@ -34,7 +34,7 @@ class Dervied1 : public virtual Base{
 
 public:
 
-	void updateNewData(int j){
+	void updateNewData(int j) override{
 		cout << "This is from dervied 1";
 	}
 };
@@ -43,7 +43,7 @@ class Dervied2 : virtual public Base{
 
 public:
 
-	void updateNewData(int j){
+	void updateNewData(int j) override{
 		cout << "This is from dervied 2";
 	}
 };
@@ -53,7 +53,7 @@ class Dervied3 : public Dervied1 , public Dervied2 {
 
 public:
 
-	void updateNewData(int j){
+	void updateNewData(int j) override{
 		cout << "This is the function of dervied 3";
 	}
 };
