@@ -10,24 +10,30 @@ class Derived{
 
     public:
 
-        Derived(int id1){ id=id1; }
+        int publicIp;
 
-        
+        Derived(int id1 , int publicIp1){
+            id = id1;
+            publicIp = publicIp1;
+        }       
 };
 
 class Base {
 
     public:
 
-        void getId(Derived d){ std::cout << d.id; };
+        void getId(Derived d){ std::cout << d.id << std::endl; };
+
+        void getPublicIp(Derived d) { std::cout << "Ip = " << d.publicIp << std::endl; }
 };
 
 int main(){
 
-    Derived d(304);
+    Derived d(304 , 12345);
     Base b;
 
     b.getId(d);
+    b.getPublicIp(d);
 
     return 0;
 }
