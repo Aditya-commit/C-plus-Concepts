@@ -1,3 +1,5 @@
+// NOTE : explicit keyword only works with the constructor
+
 #include <iostream>
 
 
