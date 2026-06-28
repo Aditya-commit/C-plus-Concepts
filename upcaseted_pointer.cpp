@@ -12,7 +12,7 @@ class Derived:public Base{
 
     public:
 
-        void displayMsg(void){
+        void displayMsg(void) override{
             cout << "This is the function of Dervied Class" << endl;
         }
 };
@@ -21,7 +21,7 @@ class Derived1:public Base{
 
     public:
 
-        void displayMsg(void){
+        void displayMsg(void) override {
             cout << "This is the function of Dervied1 Class" << endl;
         }
 };
