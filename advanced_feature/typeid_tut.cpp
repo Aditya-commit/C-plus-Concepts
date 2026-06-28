@@ -34,10 +34,10 @@ int main(){
     }
 
     if(di == b){
-        cout <<"yes";
+        cout <<"yes" << endl;
     }
     else{
-        cout << "no";
+        cout << "no" << endl;
     }
 
     return 0;
