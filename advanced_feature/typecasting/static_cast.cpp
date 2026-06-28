@@ -1,7 +1,8 @@
+// static_cast<> PERMORMS THE COMPILATION DURING COMPILE TIME
+
+
 #include <iostream>
 using namespace std;
-
-
 
 class Base {
 
