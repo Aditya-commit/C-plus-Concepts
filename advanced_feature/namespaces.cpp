@@ -1,36 +1,36 @@
 #include <iostream>
 #include <string>
-using namespace std;
 
-
-namespace user{
-    string name = "aditya";
-    void greet(void); // DECLARE HERE
+namespace user {
+    std::string name = "anonymous";
+    void setName(std::string name);
+    std::string getName(void);
+    void greetUser(void);
 }
 
-void user::greet(void){
-    // CAN DEFINE OUTSIDE OF NAMESPACE IF WE WANT
-    cout << "Hello " << user::name << " how are you doing" << endl;
+namespace company {
+    std::string name = "anonymous company";
+    void setName(std::string value);
+    std::string getName(void);
 }
 
+void user::setName(std::string value){ user::name = value; };
+std::string user::getName(void){ return user::name; }
+void greetUser(void) { std::cout << "Hi " << user::name << " sir!" << std::endl; };
 
-namespace company{
-    string name = "sky technologies";
-}
-
+void company::setName(std::string value) { company::name = value; };
+std::string company::getName(void) { return company::name; };
 
 int main(){
 
-    using namespace user;
     using namespace company;
 
-    namespace comp = company; // NAMESPACE ALIAS
-
-    cout << user::name << endl;
-    cout << comp::name << endl;
-
-    greet();
-
-    return 0;
+    namespace comp = company;
     
+    std::cout << user::getName() << std::endl;
+    std::cout << comp::getName() << std::endl;
+    
+    greetUser(); // SINCE THERE IS ONLY ONE greetUser FUNC SO NO AMBIGUITY SO THERE IS NO NEED TO CALL IT WITH EXTENSION OPERATOR
+    
+    return 0;
 }
