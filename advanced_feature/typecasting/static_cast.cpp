@@ -29,6 +29,11 @@ class Derived : public Base{
 
 int main(){
 
+    int age = 23;
+    long salary = 23423424324;
+
+    int salary_copy = static_cast<int>(salary); // NORMAL TYPE CONVERSIONS
+
     Base *b = new Derived(23);
 
     //b->dispAge(); // THIS WILL GIVE THE ERROR AS IT WILL CHECK IN THE BASE CLASS ONLY DUE TO EARLY BINDING SO TO USE THE MEMBER FUNCTION OF THE DERIVED CLASS WE HAVE TO CONVERT IT TO THE DERIVED CLASS AS IT IS ALREADY POINTING TO THE ADDRESS OF THE DERVIED CLASS IN HEAP MEMORY
