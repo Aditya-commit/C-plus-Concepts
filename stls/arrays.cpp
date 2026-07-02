@@ -37,6 +37,10 @@ int main(){
     const int *cit = ar.cbegin(); // THIS RETURNS THE CONSTANT ITERATORS(READ ONLY) , CANNOT BE USED FOR MODIFICATIONS , SAME FOR CEND
 
     std::cout << *cit << std::endl;
+
+    auto rit = ar.crbegin(); // or std::array<int , 5>::const_reverse_iterator rit = ar.crbegin() , so use auto for easiness
+
+    std::cout << *rit << std::endl;
     
 }
 
@@ -64,3 +68,19 @@ int main(){
 
 
 // std::array is essentially a safer, STL-friendly, object-oriented wrapper around a C-style array with almost zero additional runtime cost
+
+
+
+
+
+// front() , back() vs begin() , cbegin() , end() , cend()
+// -------------------------------------------------------
+
+// A good mental model is:
+// -----------------------
+
+// front() and back() give you specific elements.
+
+// begin() and end() give you positions/iterators that define a range of elements.
+
+// but effeciency wise both are O(1)
