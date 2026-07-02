@@ -31,6 +31,12 @@ int main(){
         std::cout << *i << std::endl;
     }
     
+
+    // CBEGIN , CEND
+
+    const int *cit = ar.cbegin(); // THIS RETURNS THE CONSTANT ITERATORS(READ ONLY) , CANNOT BE USED FOR MODIFICATIONS , SAME FOR CEND
+
+    std::cout << *cit << std::endl;
     
 }
 
