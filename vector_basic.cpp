@@ -11,6 +11,8 @@ using namespace std;
 // WHEN SHOULD WE USE VECTORS ?
 // Compared to the other dynamic sequence containers (deques, lists and forward_lists), vectors are very efficient accessing its elements (just like arrays) and relatively efficient adding or removing elements from its END. For operations that involve inserting or removing elements at positions other than the end, they perform worse than the others, and have less consistent iterators and references than lists and forward_lists.
 
+// Vectors works on Stack mechanism LIFO
+
 
 
 int main(){

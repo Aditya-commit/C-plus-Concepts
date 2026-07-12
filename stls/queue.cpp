@@ -24,3 +24,23 @@ int main(){
 
     return 0;
 }
+
+// WE CANNOT ACCESS ELEMENTS IN A QUEUE (IT DOES NOT PROVIDE RANDOM ACCESS ITERATION)
+
+// You also cannot iterate over a queue like this:
+// ?for (auto x : q)   ❌ Not allowed
+
+// A queue intentionally hides its internal container.
+
+
+// ALLOWED OPERATION:
+// ------------------
+
+// mq.push(x);     // Insert at back
+// mq.pop();       // Remove from front
+// mq.front();     // First element
+// mq.back();      // Last element
+// mq.empty();
+// mq.size();
+
+// This is why a queue is called an adapter—it restricts access to enforce FIFO behavior.

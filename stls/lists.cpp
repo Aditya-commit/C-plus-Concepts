@@ -94,7 +94,12 @@ int main(){
         cout << val << " ";
     }
 
+    std::cout << std::endl << "________________________" << std::endl;
 
+    // ANOTHER WAY OF ITERATING(MODERN WAY)
+    for(auto it = l1.begin() ; it != l1.end() ; it++){
+        std::cout << *it << std::endl;
+    }
 
     return 0;
 }
