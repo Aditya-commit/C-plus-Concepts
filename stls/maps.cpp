@@ -18,7 +18,18 @@ int main(){
     map<string , int> posts = { {"uwlrijf" , 2} , {"3r3r" , 1} };
 
 
-    cout << users["aditya"] << endl << posts.at("uwlrijf");
+    cout << users["aditya"] << endl << posts.at("uwlrijf") << endl;
+
+    pair<string , string> p ("name" , "aditya singh tomar");
+
+    cout << p.first << " " << p.second;
+
+    std::map<std::string , std::string> m = {{ "name" , "aditya" }};
+    
+    auto it = m.begin();
+    
+    std::cout << (*it).first << " " << (*it).second << std::endl;
+    std::cout << it->first << " " << it->second << std::endl; // SHORT HAND OF (*it). to ->
 
     return 0;
 }
